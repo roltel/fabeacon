@@ -5,22 +5,19 @@ Versão OS from scratch:
 
 apt update
 apt upgrade
-sudo apt install openvpn
+sudo apt install openvpn 
 sudo apt install mplayer
 sudo apt-get install raspi-gpio
 sudo raspi-gpio get
-sudo nano /etc/ssh/sshd_config
-PermitRootLogin yes
-/etc/init.d/ssh restart
-sudo nano /etc/hostname
-sudo nano /etc/hosts
+sudo nano /etc/ssh/sshd_config # inserir PermitRootLogin yes e dar /etc/init.d/ssh restart
+sudo nano /etc/hostname | sudo nano /etc/hosts # alterar hostname
 
 
-Imagem: Openwebrx
+FABEACON V 0.1: Openwebrx & 
 
 Conteúdo:
-- Python para usar o GPIO e ligar o pin 17 BCM
-- Jingle
+- Python para usar o GPIO e ligar o pin 17 BCM, Board 11
+- Jingle Boletim e 333
 - Cron
 
 Instalar script: 
@@ -30,6 +27,6 @@ Instalar script:
 
 
 Painel de controle:
-https://futuragora.pt/futurai/priv/
+https://futuragora.pt/futurai/priv/radioadmin
 
 
