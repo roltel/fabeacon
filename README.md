@@ -40,3 +40,10 @@ A VPN instalada acima. Bastará meter o ficheiro fabeaconXX.conf que lhe foi env
 Painel de controle:
 https://futuragora.pt/futurai/priv/radioadmin
 
+- Emitir Boletim
+- Emitir Boletim Digital RTTY
+- Emitir Plano 333
+- Emitir audio gravado na página.
+
+- Ligar a Portadora
+- Desligar a Portadora
