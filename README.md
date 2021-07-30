@@ -47,3 +47,5 @@ https://futuragora.pt/futurai/priv/radioadmin
 
 - Ligar a Portadora
 - Desligar a Portadora
+
+Disclaimer: As emissões dos ficheiros audio gerados pelo presente código-livre estão sujeitas às suas condicionantes legais e são da esclusiva responsabilidade das estações que as emitiem.
