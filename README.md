@@ -13,17 +13,30 @@ FABEACON Versão "from scratch" no Rpi:
 - fazer "sudo su" para tornar administrador e dar os seguintes commandos:
 
   sudo su # tornar admin
+  
   apt update #actualizar o repositorio
+  
   apt upgrade # actualizar o sistema
+  
   apt install openvpn  # instalar a vpn
+  
   apt install mplayer #instalar o player
+  
   apt-get install raspi-gpio # instalar os GPIO
+  
   raspi-gpio get #
+  
   nano /etc/ssh/sshd_config # inserir "PermitRootLogin yes" e dar "/etc/init.d/ssh restart"
+  
   nano /etc/hostname | sudo nano /etc/hosts # alterar hostname
+  
   cd /home/pi/
+  
   git clone https://github.com/roltel/fabeacon/
+  
   crontab -e # editar o ficheiro de rotinas para configurar as emissões.
+  
+  
 
 
 Abaixo encontra-se uma versão que usa o Openwebrx (SDR) caso o dispositivo tenha ou venha a ter pen RT8L SDR que só funciona em RPi já preconfigurado com o painel de administração, a vpn e outras ferramentas privadas.
