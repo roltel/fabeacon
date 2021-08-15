@@ -7,7 +7,7 @@ Saber mais sobre o Plano de Comunicações 333: https://macanudos.org/plano-de-e
 O presente código tranforma o dispositivo num emissor. Pode ser instalado em Telemóveis Android; raspberry pi ou qualquer pc.
 
 FABEACON Versão "from scratch" no Rpi: 
-- Sacar o raspbian e instalar num cartão de memória SD. Sugerimos usar o comando dd em linux ou em windows o programa win32iso.
+- Sacar o Raspbian (openwebrx ou Pi sdr etc..) e instalar num cartão de memória SD. Sugerimos usar o comando dd em linux ou em windows o programa win32iso.
 - Ir ao "boot" do cartão flashado e criar um ficheiro com o nome "ssh". Isso permite aceder ao Rpi via rede por SSH.
 - Ligar o Rpi com o cartão, ver que ip assumiu na rede e fazer ssh nele ssh pi@ipdorpi.
 - fazer "sudo su" para tornar administrador e dar os seguintes commandos:
@@ -36,9 +36,6 @@ FABEACON Versão "from scratch" no Rpi:
   
   crontab -e # editar o ficheiro de rotinas para configurar as emissões.
   
-  
-
-
 Abaixo encontra-se uma versão que usa o Openwebrx (SDR) caso o dispositivo tenha ou venha a ter pen RT8L SDR que só funciona em RPi já preconfigurado com o painel de administração, a vpn e outras ferramentas privadas.
 
 FABEACON "OS": Openwebrx & Fabeacon 
