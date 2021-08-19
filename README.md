@@ -14,6 +14,8 @@ FABEACON Versão "from scratch" no Rpi:
 
   sudo su # tornar admin
   
+  raspi-config # actualizar a localização para as horas baterem certo.
+  
   apt update #actualizar o repositorio
   
   apt upgrade # actualizar o sistema
