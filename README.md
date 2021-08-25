@@ -1,4 +1,4 @@
-# fabeacon
+### Fabeacon
 Raspberry Pi, Telemóvel ou PC com Boletim Informativo e Plano 333
 
 Saber mais sobre o Boletim: https://macanudos.org/boletim-informativo-na-banda-do-cidadao/
@@ -6,62 +6,52 @@ Saber mais sobre o Plano de Comunicações 333: https://macanudos.org/plano-de-e
 
 O presente código tranforma o dispositivo num emissor. Pode ser instalado em Telemóveis Android; raspberry pi ou qualquer pc.
 
-FABEACON Versão "from scratch" no Rpi: 
-- Sacar o Raspbian (openwebrx ou Pi sdr etc..) e instalar num cartão de memória SD. Sugerimos usar o comando dd em linux ou em windows o programa win32iso.
-- Ir ao "boot" do cartão flashado e criar um ficheiro com o nome "ssh". Isso permite aceder ao Rpi via rede por SSH.
-- Ligar o Rpi com o cartão, ver que ip assumiu na rede e fazer ssh nele ssh pi@ipdorpi.
-- fazer "sudo su" para tornar administrador e dar os seguintes commandos:
 
-  sudo su # tornar admin
-  
-  raspi-config # actualizar a localização para as horas baterem certo.
-  
-  apt update #actualizar o repositorio
-  
-  apt upgrade # actualizar o sistema
-  
-  apt install openvpn  # instalar a vpn
-  
-  apt install mplayer #instalar o player
-  
-  apt-get install raspi-gpio # instalar os GPIO
-  
-  raspi-gpio get #
-  
-  nano /etc/ssh/sshd_config # inserir "PermitRootLogin yes" e dar "/etc/init.d/ssh restart"
-  
-  nano /etc/hostname | sudo nano /etc/hosts # alterar hostname
-  
-  cd /home/pi/
-  
-  git clone https://github.com/roltel/fabeacon/
-  
-  crontab -e # editar o ficheiro de rotinas para configurar as emissões.
-  
-Abaixo encontra-se uma versão que usa o Openwebrx (SDR) caso o dispositivo tenha ou venha a ter pen RT8L SDR que só funciona em RPi já preconfigurado com o painel de administração, a vpn e outras ferramentas privadas.
+### Instalação
 
-FABEACON "OS": Openwebrx & Fabeacon 
-Puxar a seguinte imagem e flashar: 
+1. Fazer download do instalador **fabeacon-install.sh**
+2. Tornar o instalador executável: 
+> chmod 755 fabeacon-install.sh
+3. Executar o instalador:
+> bash fabeacon-install.sh
+4. Após a instalação concluida, todas as configurações necessárias foram realizadas e o Fabeacon é executado automáticamente.
+5. O instalador foi testado em Rapberry 3B, 4 e em PC com a distribuição Linux Mint 20.1 Ulyssa.
 
-Conteúdo:
-- OS Openwebrx (para se quiser que um dia o sistema tb funcione como sdr)
-- Python para usar o GPIO e ligar o pin 17 BCM que é o Board n.º 11
-- Jingle Boletim e roger beep 333
-- Cron - ficheiro com as rotinas
+### Desinstalação
 
-==VPN== 
-A VPN permite que possa controlar o RPI dentro de uma rede privada dando acesso não só ao painel de administraçáo abaixo como também acesso interno ao SDR (caso tenha a pen ligada) ou interligação com outros sistemas.
-A VPN instalada acima. Bastará meter o ficheiro fabeaconXX.conf que lhe foi enviado na pasta /etc/openvpn/. Como? Usando o shh scp para copiar de outro sistema ou o filezilla (cliente SFTP); 
+1. Executar o instalador:
+> bash fabeacon-install.sh
+2. Seleccionar a opção de desinstalação.
+2. Após a desinstalação concluida, o Fabeacon foi retirado do seu dispositivo.
 
-Painel de controle:
-https://futuragora.pt/futurai/priv/radioadmin
+### Instalação do Openwebrx & Fabeacon 
 
-- Emitir Boletim
-- Emitir Boletim Digital RTTY
-- Emitir Plano 333
-- Emitir audio gravado na página.
+1. Efectuar o Download do Openwebrx: https://www.openwebrx.de/download/rpi.php
+2. Instalar a imagem do Openwebrx num cartão SD. Ver instruções neste link: https://github.com/jketterl/openwebrx/wiki/Setup-Guide
+3. Proceder à instalação do Fabeacon como descrito acima.
 
-- Ligar a Portadora
-- Desligar a Portadora
+### Saber mais sobre este projecto: 
 
-Disclaimer: As emissões dos ficheiros audio gerados pelo presente código-livre estão sujeitas às suas condicionantes legais e são da esclusiva responsabilidade das estações que as emitiem.
+GITHUB: https://github.com/roltel/fabeacon
+
+Raspberry Pi, Telemóvel ou PC com Boletim Informativo e Plano 333
+
+O presente código tranforma o dispositivo num emissor. Pode ser instalado em Telemóveis Android; raspberry pi ou qualquer pc.
+
+Saber mais sobre o Boletim: https://macanudos.org/boletim-informativo-na-banda-do-cidadao/
+
+Saber mais sobre o Plano de Comunicações 333: https://macanudos.org/plano-de-emergencia-3-3-3/
+
+### Painel de Administração Fabeacon
+
+Link: https://futuragora.pt/futurai/priv/radioadmin
+
+1. Emitir Boletim
+2. Emitir Boletim Digital RTTY
+3. Emitir Plano 333
+4. Emitir audio gravado na página.
+5. Ligar a Portadora
+6. Desligar a Portadora
+
+### Disclaimer
+1. As emissões dos ficheiros audio gerados pelo presente código-livre estão sujeitas às suas condicionantes legais e são da esclusiva responsabilidade das estações que as emitiem.
