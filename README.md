@@ -1,44 +1,63 @@
-# fabeacon
-Raspberry Pi, Telemóvel ou PC com Boletim Informativo e Plano 333
+### Fabeacon
 
-Saber mais sobre o Boletim: https://macanudos.org/boletim-informativo-na-banda-do-cidadao/
-Saber mais sobre o Plano de Comunicações 333: https://macanudos.org/plano-de-emergencia-3-3-3/
+O "fabeacon" é a ferramenta que compõem as ferramentas que compõem o a emissão do Boletim Informativo e a cada três em três horas do plano de comunicações  de emergência 3 3 3 no canal 3 da Banda do Cidadão.
+
+O instalador foi criado por Octávio P e testado em Rapberry 3B, 4 e em PC com a distribuição Linux Mint 20.1 Ulyssa.
+
+### Instalação
+
+1. Fazer download do instalador **fabeacon-install.sh**
+2. Tornar o instalador executável: 
+> chmod 755 fabeacon-install.sh
+3. Executar o instalador:
+> bash fabeacon-install.sh
+4. Após a instalação concluida, todas as configurações necessárias foram realizadas e o Fabeacon é executado automáticamente.
+
+### Desinstalação
+
+1. Executar o instalador:
+> bash fabeacon-install.sh
+2. Seleccionar a opção de desinstalação.
+2. Após a desinstalação concluida, o Fabeacon foi retirado do seu dispositivo.
+
+### Administração
+
+O Painel de administração permite as seguinte 
+
+#### Remote Admin
+Link: https://futuragora.pt/futurai/priv/radioadmin
+
+1. Emitir Boletim
+2. Emitir Boletim Digital RTTY
+3. Emitir Plano 333
+4. Emitir audio gravado na página.
+5. Ligar a Portadora
+6. Desligar a Portadora
+
+
+#### Admin Local
+
+1. Correr o script fabeacon-admin.sh
+ 
+#### Raspbian & Openwebrx
+1. Efectuar o Download do Openwebrx: https://www.openwebrx.de/download/rpi.php ou Raspbian
+2. Instalar a imagem do Openwebrx num cartão SD. Ver instruções neste link: https://github.com/jketterl/openwebrx/wiki/Setup-Guide
+3. Proceder à instalação do Fabeacon como descrito acima.
+
+### Saber mais sobre este projecto: 
+
+GITHUB: https://github.com/roltel/fabeacon
+
+Raspberry Pi, Telemóvel ou PC com Boletim Informativo e Plano 333
 
 O presente código tranforma o dispositivo num emissor. Pode ser instalado em Telemóveis Android; raspberry pi ou qualquer pc.
 
-FABEACON Versão "from scratch" no Rpi: 
-- Sacar o Raspbian (openwebrx ou Pi sdr etc..) e instalar num cartão de memória SD. Sugerimos usar o comando dd em linux ou em windows o programa win32iso.
-- Ir ao "boot" do cartão flashado e criar um ficheiro com o nome "ssh". Isso permite aceder ao Rpi via rede por SSH.
-- Ligar o Rpi com o cartão, ver que ip assumiu na rede e fazer ssh nele ssh pi@ipdorpi.
-- fazer "sudo su" para tornar administrador e dar os seguintes commandos:
+Saber mais sobre o Boletim: https://macanudos.org/boletim-informativo-na-banda-do-cidadao/
 
-  sudo su # tornar admin
-  
-  raspi-config # actualizar a localização para as horas baterem certo.
-  
-  apt update #actualizar o repositorio
-  
-  apt upgrade # actualizar o sistema
-  
-  apt install openvpn  # instalar a vpn
-  
-  apt install mplayer #instalar o player
-  
-  apt-get install raspi-gpio # instalar os GPIO
-  
-  raspi-gpio get #
-  
-  nano /etc/ssh/sshd_config # inserir "PermitRootLogin yes" e dar "/etc/init.d/ssh restart"
-  
-  nano /etc/hostname | sudo nano /etc/hosts # alterar hostname
-  
-  cd /home/pi/
-  
-  git clone https://github.com/roltel/fabeacon/
-  
-  crontab -e # editar o ficheiro de rotinas para configurar as emissões.
-  
-Abaixo encontra-se uma versão que usa o Openwebrx (SDR) caso o dispositivo tenha ou venha a ter pen RT8L SDR que só funciona em RPi já preconfigurado com o painel de administração, a vpn e outras ferramentas privadas.
+Saber mais sobre o Plano de Comunicações 333: https://macanudos.org/plano-de-emergencia-3-3-3/
+
+### Disclaimer
+1. As emissões dos ficheiros audio gerados pelo presente código-livre estão sujeitas às suas condicionantes legais e são da esclusiva responsabilidade das estações que as emitiem.
 
 FABEACON "OS": Openwebrx & Fabeacon 
 Puxar a seguinte imagem e flashar: 
@@ -60,7 +79,6 @@ https://futuragora.pt/futurai/priv/radioadmin
 - Emitir Boletim Digital RTTY
 - Emitir Plano 333
 - Emitir audio gravado na página.
-
 - Ligar a Portadora
 - Desligar a Portadora
 
