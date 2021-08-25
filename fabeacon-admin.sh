@@ -24,11 +24,11 @@ elif [ "$options" = "Boletim-rtty-play" ]; then
         echo "Escolheu a option $options"
         ./bdigital.sh
 
-elif [ "$options" = "Boletim-rtty-play" ]; then
+elif [ "$options" = "PTT_ON" ]; then
         echo "Escolheu a option $options"
         python ./on.py
 
-elif [ "$options" = "Boletim-rtty-play" ]; then
+elif [ "$options" = "PTT_OFF" ]; then
         echo "Escolheu a option $options"
          python ./off.py
 
