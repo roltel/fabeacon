@@ -8,7 +8,7 @@ elif [ "$options" = "Quit" ]; then
         echo "Exiting FABEACON ADMIN"
 	exit
 
-elif [ "$options" = "Boletim-play" ]; then
+elif [ "$options" = "Installer" ]; then
         echo "Escolheu a option $options"
         ./fabeacon-installer.sh
 
