@@ -1,15 +1,21 @@
 ### Fabeacon
 
-O "fabeacon" é a ferramenta que compõem as ferramentas que compõem o a emissão do Boletim Informativo e a cada três em três horas do plano de comunicações  de emergência 3 3 3 no canal 3 da Banda do Cidadão.
+O "fabeacon" é o software que compõe a emissão do Boletim Informativo dos MAcanudos e a cada três horas do plano de comunicações de emergência 3 3 3 no canal 3 da Banda do Cidadão.
 
 Conteúdo:
 - Python para usar o GPIO e ligar o pin 17 BCM que é o Board n.º 11;
 - Jingle Boletim e roger beep 333;
 - Cron - ficheiro com as rotinas;
 
-O instalador foi criado por Octávio P e testado em Rapberry 3B, 4 e em PC com a distribuição Linux Mint 20.1 Ulyssa.
+### Instalador
 
-### Instalação
+O instalador foi criado por Octávio Pereira e testado em Rapberry 3B, 4 e em PC com a distribuição Linux Mint 20.1 Ulyssa.
+
+Download:
+
+wget https://github.com/octaviofilipepereira/fabeacon/blob/main/fabeacon-install.sh
+
+#### Instalação
 
 1. Fazer download do instalador **fabeacon-install.sh**
 2. Tornar o instalador executável: 
@@ -18,7 +24,7 @@ O instalador foi criado por Octávio P e testado em Rapberry 3B, 4 e em PC com a
 > bash fabeacon-install.sh
 4. Após a instalação concluida, todas as configurações necessárias foram realizadas e o Fabeacon é executado automáticamente.
 
-### Desinstalação
+#### Desinstalação
 
 1. Executar o instalador:
 > bash fabeacon-install.sh
