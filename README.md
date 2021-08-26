@@ -51,7 +51,7 @@ Link: https://futuragora.pt/futurai/priv/radioadmin;
 
 #### Admin Local
 
-1. Correr o script fabeacon-admin.sh
+Executar o script fabeacon-admin.sh
 
 #### VPN
 
