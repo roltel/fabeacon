@@ -46,7 +46,7 @@ O Painel de administração permite as seguinte funcionalidades:
 
 Requisitos: VPN Macanudos* & PIN macanudos
 
-Link: https://futuragora.pt/futurai/priv/radioadmin;
+Link: https://macanudos.org/app/radioadmin;
 
 
 #### Admin Local
